@@ -8,7 +8,10 @@ Crie uma lista chamada cores contendo as cores:
 Em seguida, exiba a lista completa.
 
 """
-print("\n")
+
+print("\n-----Crie lista cores-----\n")
+
 cores= ["Vermelho, Azul, Verde, Amarelo"]
 print(cores)
-     
+
+print("\n---------------------------\n")  

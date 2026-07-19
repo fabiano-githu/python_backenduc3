@@ -1,10 +1,15 @@
+'''
+1.	Verificação de login básico
+•	Pergunte ao usuário um nome de usuário.
+•	Se for igual a "admin", exiba "Acesso permitido".
+•	Caso contrário, não mostro e nada (por enquanto).
+'''
 
-'''1.	Verificação de idade mínima
-•	Peça a idade do usuário.
-•	Se for maior ou igual a 18, exiba "Acesso liberado ao sistema.".'''
+print("\n------------login básico---------------\n")
 
-print("\n")
-idade = int(input("Digite sua idade: "))
+usuario = input("Digite o nome de usuário: ")
 
-if idade >= 18:
-    print("Acesso liberado ao sistema.")
+if usuario == "admin":
+    print("Acesso permitido")
+
+print("\n---------------------------\n")
