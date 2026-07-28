@@ -6,13 +6,23 @@
 
 print("\n--------Menu escolha-------\n")
 
-funcionário = {
-    "nome": "Carlos",
-    "idade": 23,
-    "cargo": "programador"
-}
+funcionarios = [
+    {
+        "nome": "Carlos",
+        "idade": 43,
+        "cargo": "Analista"
+    }
+]
 
-print(funcionário)
+print(funcionarios)
+
+funcionarios.append({
+    "nome": "Fabiano",
+    "idade": 44,
+    "cargo": "Programador"
+})
+
+print(funcionarios)
 
 print("\n---------------------------\n")
 
