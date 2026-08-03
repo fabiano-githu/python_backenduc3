@@ -8,7 +8,7 @@ Passos:
 '''
 
 
-print("\n---Usar while para validar input---\n")
+print("\n-----Usar while para validar input-----\n")
 
 
 numero = int(input("Digite um número positivo: "))

@@ -10,6 +10,6 @@ print("\n------------login básico---------------\n")
 usuario = input("Digite o nome de usuário: ")
 
 if usuario == "admin":
-    print("Acesso permitido")
+    print(f" Ola {usuario} Acesso permitido ")
 
 print("\n---------------------------\n")
