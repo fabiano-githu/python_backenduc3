@@ -6,7 +6,6 @@ Use for + continue.
 	
 '''
 
-
 print("\n---Função que imprime apenas números ímpares pulando múltiplos de 7---\n")
 
 def imprimir_impares():
@@ -22,3 +21,6 @@ imprimir_impares()
 
 
 print("\n------------------------------------------------------------------------\n")
+
+
+
