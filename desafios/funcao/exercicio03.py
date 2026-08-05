@@ -19,7 +19,12 @@ def fatorial(n):
 
     return resultado
 
+
+# teste printar no terminal 
 print(fatorial(5))
+print(fatorial(100))
+print(fatorial(30))
+
 
 
 

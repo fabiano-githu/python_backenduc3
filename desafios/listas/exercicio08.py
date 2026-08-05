@@ -9,12 +9,14 @@ Exiba o resultado.
 '''
 
 
-print("\n------Ordem crescente-----\n")
+print("\n------Ordem crescente e decrecente-----\n")
 
 num2 = [50, 10, 80, 20, 40]
 
-num2.sort()
+num2.sort() #crecente
+print(f"{num2} a ordem é crescente!")
 
-print(num2)
+num2.sort(reverse=num2) #decrecente 
+print(f"{num2} A ordem é decrescente!")
 
 print("\n---------------------------\n")
