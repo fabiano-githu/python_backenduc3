@@ -21,7 +21,7 @@ print("\n--------lista números-------\n")
 listanum = [5, 10, 15, 20, 25]
 listanum.remove(15)
 print(listanum)
-listanum.remove(10)
+listanum.pop(0)
 print(listanum)
 listanum.remove(20)
 print(listanum)
