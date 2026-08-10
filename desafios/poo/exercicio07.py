@@ -9,11 +9,12 @@ Enunciado:
 print("\n---Classe lista interna---\n")
 
 
-
 class Agenda:
     def __init__(self):
         self.contatos = []
 
+        print(self.contatos)
 
+agenda = Agenda()
 
 print("\n---------------------------\n")
