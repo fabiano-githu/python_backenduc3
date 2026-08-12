@@ -16,8 +16,8 @@ meu_carro = Carro("Toyota") #criando objeto (instanciar)
 print(type(meu_carro.marca))
 print(meu_carro.marca)
 '''
-# Encapsulamento
 
+# Encapsulamento
 class Banco:
 
     def __init__(self, saldo=0):
@@ -72,6 +72,8 @@ class Conta(Banco):
 
 conta1 = Conta(200, 452, "236252829928-1", "Bruno Gomes")
 conta2 = Conta(200, 452, "236251239289-1", "Márcia Luiza")
+
+
 
 print("\n======CONTAS CLIENTES======")
 
