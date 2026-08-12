@@ -1,3 +1,6 @@
+import random
+
+
 class Personagem:
 
     def __init__(self, nome, vida, ataque, defesa):
@@ -7,7 +10,14 @@ class Personagem:
         self.defesa = defesa
 
     def calcular_dano(self, defensor):
-        dano = self.ataque - defensor.defesa
+
+        # Ataque aleatório
+        ataque_aleatorio = random.randint(
+            self.ataque - 10,
+            self.ataque + 10
+        )
+
+        dano = ataque_aleatorio - defensor.defesa
 
         if dano <= 0:
             dano = 0
@@ -93,22 +103,49 @@ for inimigo in inimigos:
 
     while jogador.esta_vivo() and inimigo.esta_vivo():
 
+        # --------------------------
+        # TURNO DO JOGADOR
+        # --------------------------
+
         print("\n--- Turno do jogador ---")
 
         jogador.atacar(inimigo)
 
+        # Verifica se o inimigo morreu
         if not inimigo.esta_vivo():
-            print(f"\n🏆 {inimigo.nome} foi derrotado!")
+
+            print(
+                f"\n💀 {inimigo.nome} foi derrotado!"
+            )
+
             break
+
+
+        # --------------------------
+        # TURNO DO INIMIGO
+        # --------------------------
 
         print("\n--- Turno do inimigo ---")
 
         inimigo.atacar(jogador)
 
+        # Verifica se o jogador morreu
         if not jogador.esta_vivo():
-            print("\n💀 Você perdeu!")
+
+            print("\n💀 VOCÊ FOI DERROTADO!")
             break
 
 
+# ==========================
+# RESULTADO FINAL
+# ==========================
+
 if jogador.esta_vivo():
-    print("\n🏆 VOCÊ DERROTOU TODOS OS INIMIGOS!")
+
+    print("\n🏆 VITÓRIA!")
+    print("Você derrotou todos os inimigos!")
+
+else:
+
+    print("\n💀 DERROTA!")
+    print("Você foi derrotado.")
