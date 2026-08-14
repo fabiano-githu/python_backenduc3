@@ -4,7 +4,7 @@
 ###############################
 PROJETO 4: SISTEMA DE FASES
 Esse é o projeto integrador.
-🎯 Objetivo
+   Objetivo
 Criar uma pequena aventura com:
 •	jogador; 
 •	níveis; 

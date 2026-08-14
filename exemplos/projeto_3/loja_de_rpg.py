@@ -1,10 +1,10 @@
 
 # ==========================================
-# 🏪 LOJA DE RPG
+#      LOJA DE RPG
 # ==========================================
 
 
-#  PRODUTOS DA LOJA
+#PRODUTOS DA LOJA
 
 
 produtos = {
@@ -46,7 +46,7 @@ produtos = {
 
 
 
-# 👤 DADOS DO JOGADOR
+#DADOS DO JOGADOR
 
 
 saldo = 600
@@ -55,7 +55,7 @@ inventario = {}
 
 
 
-# 🏷️ FUNÇÃO DE DESCONTO
+#FUNÇÃO DE DESCONTO
 
 
 def aplicar_desconto(preco, desconto):
@@ -68,7 +68,7 @@ def aplicar_desconto(preco, desconto):
 
 
 
-#  VISUALIZAR PRODUTOS
+#VISUALIZAR PRODUTOS
 
 
 def visualizar_produtos():
@@ -83,11 +83,11 @@ def visualizar_produtos():
         print(f"Estoque: {produto['estoque']}")
 
         if produto["lendario"]:
-            print("⭐ ITEM LENDÁRIO")
+            print(" ITEM LENDÁRIO")
 
 
 
-# 🔎 CONSULTAR PREÇO
+#CONSULTAR PREÇO
 
 def consultar_preco():
 
@@ -95,17 +95,17 @@ def consultar_preco():
 
     if produto not in produtos:
 
-        print("❌ Item inexistente!")
+        print(" Item inexistente!")
 
         return
 
     preco = produtos[produto]["preco"]
 
-    print(f"\n💰 {produto}: R$ {preco:.2f}")
+    print(f"\ {produto}: R$ {preco:.2f}")
 
 
 
-# 🛒 COMPRAR PRODUTO
+#COMPRAR PRODUTO
 
 
 def comprar():
@@ -117,7 +117,7 @@ def comprar():
     # Verifica se o produto existe
     if produto not in produtos:
 
-        print("❌ Item inexistente!")
+        print("  Item inexistente!")
 
         return
 
@@ -126,7 +126,7 @@ def comprar():
     # Verifica quantidade
     if quantidade <= 0:
 
-        print("❌ Quantidade inválida!")
+        print(" Quantidade inválida!")
 
         return
 
@@ -135,7 +135,7 @@ def comprar():
 
     if quantidade > estoque:
 
-        print("❌ Estoque insuficiente!")
+        print(" Estoque insuficiente!")
 
         return
 
@@ -159,7 +159,7 @@ def comprar():
     # Verifica saldo
     if saldo < total:
 
-        print("\n❌ Saldo insuficiente!")
+        print("\n Saldo insuficiente!")
 
         print(f"Saldo: R$ {saldo:.2f}")
         print(f"Total: R$ {total:.2f}")
@@ -207,7 +207,7 @@ def mostrar_inventario():
         print(f"{produto} → {quantidade} unidade(s)")
 
 
-# 💰 MOSTRAR SALDO
+#  MOSTRAR SALDO
 
 
 def mostrar_saldo():
@@ -218,7 +218,7 @@ def mostrar_saldo():
 
 
 
-# 💵 VENDER ITEM
+# VENDER ITEM
 
 
 def vender():
@@ -250,29 +250,28 @@ def vender():
 
         return
 
-    # Preço original
+
     preco = produtos[produto]["preco"]
 
-    # Venda por 70% do preço
+   
     valor_venda = preco * 0.70
 
     total = valor_venda * quantidade
 
-    # Atualiza saldo
+   
     saldo += total
 
-    # Atualiza inventário
     inventario[produto] -= quantidade
 
-    # Se acabou o item, remove do inventário
+    
     if inventario[produto] == 0:
 
         del inventario[produto]
 
-    # Devolve item ao estoque
+  
     produtos[produto]["estoque"] += quantidade
 
-    print("\n✅ VENDA REALIZADA!")
+    print("\n VENDA REALIZADA!")
 
     print(f"Produto: {produto}")
     print(f"Quantidade: {quantidade}")
@@ -281,7 +280,7 @@ def vender():
 
 
 
-# ⭐ MOSTRAR ITENS LENDÁRIOS
+#  MOSTRAR ITENS LENDÁRIOS
 
 
 def mostrar_lendarios():
@@ -316,16 +315,16 @@ def menu():
 
         print("\n")
         print("================================")
-        print("       🏪 LOJA DE RPG")
+        print("        LOJA DE RPG")
         print("================================")
-        print("1 - 👀 Visualizar produtos")
-        print("2 - 🔎 Consultar preço")
-        print("3 - 🛒 Comprar")
-        print("4 - 💰 Ver saldo")
-        print("5 - 🎒 Ver inventário")
-        print("6 - 💵 Vender item")
-        print("7 - ⭐ Ver itens lendários")
-        print("8 - 🚪 Sair")
+        print("1 -  Visualizar produtos")
+        print("2 -  Consultar preço")
+        print("3 -  Comprar")
+        print("4 -  Ver saldo")
+        print("5 -  Ver inventário")
+        print("6 -  Vender item")
+        print("7 -  Ver itens lendários")
+        print("8 -  Sair")
         print("================================")
 
         opcao = input("Escolha uma opção: ").strip()
@@ -365,11 +364,11 @@ def menu():
 
         else:
 
-            print("\n❌ Opção inválida!")
+            print("\n Opção inválida!")
 
 
 # ==========================================
-# ▶️ INICIAR PROGRAMA
+# ▶ INICIAR PROGRAMA
 # ==========================================
 
 menu()
